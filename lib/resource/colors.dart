@@ -24,7 +24,7 @@ class AppColors {
   ];
 
   static const Color loadingSpinKit = Colors.black;
-  static const Color mainBg = Colors.white;
+  static const Color mainBg = Color.fromARGB(255, 251, 251, 251);
   static const Color title = Colors.black;
   static const Color oldPrice = Color.fromARGB(255, 191, 191, 191);
   static const Color shadow = Color.fromARGB(90, 0, 0, 0);
@@ -33,7 +33,7 @@ class AppColors {
   static const Color searchBar = Colors.white;
   static const Color scaffoldBackgroundColor =
       Color.fromARGB(255, 251, 251, 251);
-  static const Color borderColor = Colors.grey;
+  static const Color borderColor = Color.fromARGB(255, 217, 220, 228);
   static const Color focusedBorderColor = Colors.blue;
   static const Color primaryColor = Colors.blue;
   static const Color surfaceColor = Color.fromARGB(255, 243, 243, 243);
@@ -46,4 +46,5 @@ class AppColors {
   static const Color amazingColor = Color.fromARGB(255, 57, 24, 80);
   static const Color success = Colors.green;
   static const Color onSuccess = Colors.white;
+  static const Color mainButton = Color.fromARGB(255, 0, 117, 251);
 }

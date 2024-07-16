@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:watch_store/screens/splash_screen.dart';
+import 'package:watch_store/screens/register/get_otp_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,10 +10,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Watch App',
-      home: SplashScreen(),
+      home: GetOtpScreen(),
     );
   }
 }
