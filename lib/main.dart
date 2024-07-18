@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:watch_store/components/themes.dart';
 import 'package:watch_store/screens/register/user_register_screen.dart';
+import 'package:watch_store/screens/register/verify_otp_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: lightTheme(),
       title: 'Watch App',
-      home: const UserRegisterScreen(),
+      home: const VerifyOtpScreen(),
     );
   }
 }

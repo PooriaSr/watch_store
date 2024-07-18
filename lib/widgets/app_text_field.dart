@@ -4,6 +4,7 @@ import 'package:watch_store/resource/dimens.dart';
 class AppTextField extends StatelessWidget {
   final String title;
   final String hint;
+  final String countDown;
   final TextEditingController controller;
   final Widget? icon;
   final Color iconColor;
@@ -16,6 +17,7 @@ class AppTextField extends StatelessWidget {
       required this.title,
       required this.hint,
       required this.controller,
+      this.countDown = '',
       this.textInputType = TextInputType.text,
       this.textDirection = TextDirection.rtl,
       this.textAlign = TextAlign.start,
@@ -30,9 +32,17 @@ class AppTextField extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         Padding(
-          padding: const EdgeInsets.only(
-              right: AppDimens.xSmall, bottom: AppDimens.xSmall),
-          child: Text(title),
+          padding: const EdgeInsets.all(AppDimens.xSmall),
+          child: SizedBox(
+            width: phoneSize.width / 1.6,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(countDown),
+                Text(title),
+              ],
+            ),
+          ),
         ),
         icon == null
             ? SizedBox(

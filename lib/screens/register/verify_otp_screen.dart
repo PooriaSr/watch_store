@@ -29,6 +29,7 @@ class VerifyOtpScreen extends StatelessWidget {
             AppTextField(
               title: AppStrings.enterVerificationCode,
               hint: AppStrings.hintVerificationCode,
+              countDown: '1:43',
               controller: textEditingController,
               textInputType: TextInputType.number,
               textAlign: TextAlign.center,
