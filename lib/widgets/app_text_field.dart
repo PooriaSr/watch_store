@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-
-import 'package:watch_store/resource/colors.dart';
 import 'package:watch_store/resource/dimens.dart';
 
 class AppTextField extends StatelessWidget {
   final String title;
   final String hint;
   final TextEditingController controller;
-  final Widget icon;
+  final Widget? icon;
   final Color iconColor;
   final TextInputType textInputType;
   final TextDirection textDirection;
+  final TextAlign textAlign;
 
   const AppTextField(
       {super.key,
@@ -19,7 +18,8 @@ class AppTextField extends StatelessWidget {
       required this.controller,
       this.textInputType = TextInputType.text,
       this.textDirection = TextDirection.rtl,
-      this.icon = const SizedBox.shrink(),
+      this.textAlign = TextAlign.start,
+      this.icon,
       this.iconColor = Colors.black});
 
   @override
@@ -31,32 +31,39 @@ class AppTextField extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.only(
-              right: AppDimens.small, bottom: AppDimens.small),
+              right: AppDimens.xSmall, bottom: AppDimens.xSmall),
           child: Text(title),
         ),
-        SizedBox(
-          width: phoneSize.width / 1.6,
-          height: phoneSize.height / 20,
-          child: TextField(
-            keyboardType: textInputType,
-            textDirection: textDirection,
-            controller: controller,
-            decoration: InputDecoration(
-                filled: true,
-                fillColor: AppColors.focusedTextField,
-                enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(AppDimens.small),
-                    borderSide: const BorderSide(color: AppColors.borderColor)),
-                focusColor: AppColors.focusedBorderColor,
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(AppDimens.small)),
-                hintText: hint,
-                hintStyle: const TextStyle(fontSize: 12),
-                hintTextDirection: TextDirection.rtl,
-                prefixIcon: icon,
-                prefixIconColor: iconColor),
-          ),
-        ),
+        icon == null
+            ? SizedBox(
+                width: phoneSize.width / 1.6,
+                height: phoneSize.height / 20,
+                child: TextField(
+                  keyboardType: textInputType,
+                  textDirection: textDirection,
+                  textAlign: textAlign,
+                  controller: controller,
+                  decoration: InputDecoration(
+                      hintText: hint,
+                      hintTextDirection: textDirection,
+                      prefixIconColor: iconColor),
+                ),
+              )
+            : SizedBox(
+                width: phoneSize.width / 1.6,
+                height: phoneSize.height / 20,
+                child: TextField(
+                  keyboardType: textInputType,
+                  textDirection: textDirection,
+                  textAlign: textAlign,
+                  controller: controller,
+                  decoration: InputDecoration(
+                      hintText: hint,
+                      hintTextDirection: textDirection,
+                      prefixIcon: icon,
+                      prefixIconColor: iconColor),
+                ),
+              ),
       ],
     );
   }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:watch_store/components/extentions.dart';
+import 'package:watch_store/components/extensions.dart';
 import 'package:watch_store/resource/dimens.dart';
 import 'package:watch_store/widgets/app_loading.dart';
 import 'package:watch_store/widgets/app_logo.dart';

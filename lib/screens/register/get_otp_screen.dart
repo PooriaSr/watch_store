@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:watch_store/components/extentions.dart';
-import 'package:watch_store/resource/colors.dart';
+import 'package:watch_store/components/extensions.dart';
+
 import 'package:watch_store/resource/dimens.dart';
 import 'package:watch_store/resource/strings.dart';
 import 'package:watch_store/widgets/app_button.dart';
@@ -17,7 +17,6 @@ class GetOtpScreen extends StatelessWidget {
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
-        backgroundColor: AppColors.mainBg,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -29,7 +28,7 @@ class GetOtpScreen extends StatelessWidget {
               hint: AppStrings.hintPhoneNumber,
             ),
             AppDimens.xLarge.sizedBoxHeight,
-            AppButton(function: () {}, title: AppStrings.sendOtpCode)
+            MainAppButton(onPressed: () {}, title: AppStrings.sendOtpCode)
           ],
         ),
       ),
