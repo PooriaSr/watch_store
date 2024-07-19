@@ -1,12 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:watch_store/components/extensions.dart';
+import 'package:watch_store/gen/assets.gen.dart';
 import 'package:watch_store/resource/dimens.dart';
 import 'package:watch_store/resource/strings.dart';
 import 'package:watch_store/widgets/app_avatar.dart';
 import 'package:watch_store/widgets/app_button.dart';
 import 'package:watch_store/widgets/app_text_field.dart';
+import 'package:watch_store/widgets/main_app_bar.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class UserRegisterScreen extends StatelessWidget {
   const UserRegisterScreen({super.key});
@@ -19,6 +20,11 @@ class UserRegisterScreen extends StatelessWidget {
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         resizeToAvoidBottomInset: false,
+        appBar: PreferredSize(
+            preferredSize: Size.fromHeight(phoneSize.height / 20),
+            child: MainAppBar(
+                title: AppStrings.register,
+                icon: SvgPicture.asset(Assets.svg.back))),
         body: SafeArea(
           child: SingleChildScrollView(
             reverse: true,
@@ -26,38 +32,38 @@ class UserRegisterScreen extends StatelessWidget {
               width: phoneSize.width,
               child: Column(
                 children: [
-                  (phoneSize.height / 20).sizedBoxHeight,
+                  AppDimens.xLarge.sizedBoxHeight,
                   const AppAvatar(),
-                  (phoneSize.height / 20).sizedBoxHeight,
+                  AppDimens.xLarge.sizedBoxHeight,
                   AppTextField(
                       title: AppStrings.nameLastName,
                       hint: AppStrings.hintNameLastName,
                       controller: textEditingController),
-                  (phoneSize.height / 45).sizedBoxHeight,
+                  AppDimens.medium.sizedBoxHeight,
                   AppTextField(
                       title: AppStrings.homeNumber,
                       hint: AppStrings.hintHomeNumber,
                       controller: textEditingController),
-                  (phoneSize.height / 45).sizedBoxHeight,
+                  AppDimens.medium.sizedBoxHeight,
                   AppTextField(
                       title: AppStrings.address,
                       hint: AppStrings.hintAddress,
                       controller: textEditingController),
-                  (phoneSize.height / 45).sizedBoxHeight,
+                  AppDimens.medium.sizedBoxHeight,
                   AppTextField(
                       title: AppStrings.postalCode,
                       hint: AppStrings.hintPostalCode,
                       controller: textEditingController),
-                  (phoneSize.height / 45).sizedBoxHeight,
+                  AppDimens.medium.sizedBoxHeight,
                   AppTextField(
                     title: AppStrings.location,
                     hint: AppStrings.hintLocation,
                     controller: textEditingController,
                     icon: const Icon(Icons.location_on_outlined),
                   ),
-                  (phoneSize.height / 20).sizedBoxHeight,
+                  AppDimens.xxLarge.sizedBoxHeight,
                   MainAppButton(onPressed: () {}, title: AppStrings.register),
-                  (MediaQuery.of(context).viewInsets.bottom / 1.2)
+                  (MediaQuery.of(context).viewInsets.bottom / 1.4)
                       .sizedBoxHeight,
                 ],
               ),

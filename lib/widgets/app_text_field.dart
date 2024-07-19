@@ -34,7 +34,7 @@ class AppTextField extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(AppDimens.xSmall),
           child: SizedBox(
-            width: phoneSize.width / 1.6,
+            width: phoneSize.width / 1.63,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
