@@ -10,8 +10,8 @@ class MainAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: AppColors.appbar,
-      shadowColor: AppColors.appbarShadow,
+      backgroundColor: LightAppColors.appbar,
+      shadowColor: LightAppColors.appbarShadow,
       elevation: 1,
       titleSpacing: AppDimens.large,
       title: Row(

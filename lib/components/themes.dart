@@ -5,9 +5,9 @@ import 'package:watch_store/resource/colors.dart';
 ThemeData lightTheme() {
   return ThemeData(
     brightness: Brightness.light,
-    iconTheme: const IconThemeData(color: AppColors.iconColor),
-    primaryColor: AppColors.primaryColor,
-    scaffoldBackgroundColor: AppColors.scaffoldBackgroundColor,
+    iconTheme: const IconThemeData(color: LightAppColors.iconColor),
+    primaryColor: LightAppColors.primaryColor,
+    scaffoldBackgroundColor: LightAppColors.scaffoldBackgroundColor,
     inputDecorationTheme: inputDecorationTheme,
   );
 }

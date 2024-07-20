@@ -7,6 +7,7 @@ class AppButtonStyles {
   static ButtonStyle mainButtonStyle = ButtonStyle(
       shape: WidgetStatePropertyAll(RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppDimens.small))),
-      foregroundColor: const WidgetStatePropertyAll(AppColors.mainButtonText),
-      backgroundColor: const WidgetStatePropertyAll(AppColors.mainButton));
+      foregroundColor:
+          const WidgetStatePropertyAll(LightAppColors.mainButtonText),
+      backgroundColor: const WidgetStatePropertyAll(LightAppColors.mainButton));
 }

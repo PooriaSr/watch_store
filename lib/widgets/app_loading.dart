@@ -9,7 +9,7 @@ class AppLoading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SpinKitThreeBounce(
-      color: AppColors.loadingSpinKit,
+      color: LightAppColors.loadingSpinKit,
       size: AppDimens.large,
     );
   }

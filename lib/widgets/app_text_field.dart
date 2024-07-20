@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:watch_store/components/text_styles.dart';
 import 'package:watch_store/resource/dimens.dart';
 
 class AppTextField extends StatelessWidget {
@@ -34,41 +35,51 @@ class AppTextField extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(AppDimens.xSmall),
           child: SizedBox(
-            width: phoneSize.width / 1.63,
+            width: phoneSize.width / 1.42,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(countDown),
-                Text(title),
+                Text(
+                  countDown,
+                  style: LightAppTextStyles.title,
+                ),
+                Text(
+                  title,
+                  style: LightAppTextStyles.title,
+                ),
               ],
             ),
           ),
         ),
         icon == null
             ? SizedBox(
-                width: phoneSize.width / 1.6,
+                width: phoneSize.width / 1.4,
                 height: phoneSize.height / 20,
                 child: TextField(
                   keyboardType: textInputType,
                   textDirection: textDirection,
                   textAlign: textAlign,
                   controller: controller,
+                  style: LightAppTextStyles.title,
                   decoration: InputDecoration(
                       hintText: hint,
+                      hintStyle: LightAppTextStyles.hint,
                       hintTextDirection: textDirection,
                       prefixIconColor: iconColor),
                 ),
               )
             : SizedBox(
-                width: phoneSize.width / 1.6,
+                width: phoneSize.width / 1.4,
                 height: phoneSize.height / 20,
                 child: TextField(
                   keyboardType: textInputType,
                   textDirection: textDirection,
                   textAlign: textAlign,
                   controller: controller,
+                  style: LightAppTextStyles.title,
                   decoration: InputDecoration(
                       hintText: hint,
+                      hintStyle: LightAppTextStyles.hint,
                       hintTextDirection: textDirection,
                       prefixIcon: icon,
                       prefixIconColor: iconColor),

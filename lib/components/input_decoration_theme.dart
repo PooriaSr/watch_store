@@ -7,18 +7,18 @@ InputDecorationTheme inputDecorationTheme = InputDecorationTheme(
     fillColor: WidgetStateColor.resolveWith(
       (states) {
         if (states.contains(WidgetState.focused)) {
-          return AppColors.focusedTextField;
+          return LightAppColors.focusedTextField;
         } else {
-          return AppColors.focusedTextField;
+          return LightAppColors.focusedTextField;
         }
       },
     ),
     enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(AppDimens.small),
-        borderSide: const BorderSide(color: AppColors.borderColor)),
+        borderSide: const BorderSide(color: LightAppColors.borderColor)),
     focusedBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(AppDimens.small),
-      borderSide: const BorderSide(color: AppColors.focusedBorderColor),
+      borderSide: const BorderSide(color: LightAppColors.focusedBorderColor),
     ),
     hintStyle: const TextStyle(fontSize: 12),
     contentPadding: const EdgeInsets.all(AppDimens.small));
