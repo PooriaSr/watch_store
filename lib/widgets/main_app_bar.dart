@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:watch_store/components/text_styles.dart';
 import 'package:watch_store/resource/colors.dart';
 import 'package:watch_store/resource/dimens.dart';
 
@@ -20,7 +21,10 @@ class MainAppBar extends StatelessWidget {
           icon,
           Padding(
             padding: const EdgeInsets.only(bottom: AppDimens.xSmall),
-            child: Text(title),
+            child: Text(
+              title,
+              style: LightAppTextStyles.appBarTitle,
+            ),
           ),
         ],
       ),

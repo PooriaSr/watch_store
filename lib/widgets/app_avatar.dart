@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:watch_store/components/extensions.dart';
+import 'package:watch_store/components/text_styles.dart';
 import 'package:watch_store/gen/assets.gen.dart';
 import 'package:watch_store/resource/dimens.dart';
 import 'package:watch_store/resource/strings.dart';
@@ -22,7 +23,10 @@ class AppAvatar extends StatelessWidget {
                   image: Assets.png.avatar.provider(), fit: BoxFit.cover)),
         ),
         AppDimens.medium.sizedBoxHeight,
-        const Text(AppStrings.chooseProfileImage)
+        const Text(
+          AppStrings.chooseProfileImage,
+          style: LightAppTextStyles.avatarText,
+        )
       ],
     );
   }

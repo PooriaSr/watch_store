@@ -12,14 +12,14 @@ class MainAppButton extends StatelessWidget {
   Widget build(BuildContext context) {
     Size phoneSize = MediaQuery.of(context).size;
     return SizedBox(
-      width: phoneSize.width / 1.6,
+      width: phoneSize.width / 1.4,
       height: phoneSize.height / 20,
       child: ElevatedButton(
         onPressed: onPressed,
         style: AppButtonStyles.mainButtonStyle,
         child: Text(
           title,
-          style: LightAppTextStyles.buttonTitle,
+          style: LightAppTextStyles.mainButtonTitle,
         ),
       ),
     );

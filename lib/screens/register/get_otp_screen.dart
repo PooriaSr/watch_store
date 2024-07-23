@@ -3,7 +3,7 @@ import 'package:watch_store/components/extensions.dart';
 
 import 'package:watch_store/resource/dimens.dart';
 import 'package:watch_store/resource/strings.dart';
-import 'package:watch_store/widgets/app_button.dart';
+import 'package:watch_store/widgets/main_app_button.dart';
 import 'package:watch_store/widgets/app_logo.dart';
 import 'package:watch_store/widgets/app_text_field.dart';
 
@@ -13,7 +13,7 @@ class GetOtpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final TextEditingController textEditingController = TextEditingController();
-    Size phoneSize = MediaQuery.of(context).size;
+
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
@@ -21,7 +21,7 @@ class GetOtpScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const AppLogo(),
-            (phoneSize.height / 6.6).sizedBoxHeight,
+            AppDimens.xxxLarge.sizedBoxHeight,
             AppTextField(
               controller: textEditingController,
               title: AppStrings.enterYourNumber,

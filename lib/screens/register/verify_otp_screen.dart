@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:watch_store/components/extensions.dart';
+import 'package:watch_store/components/text_styles.dart';
 import 'package:watch_store/resource/dimens.dart';
 import 'package:watch_store/resource/strings.dart';
 import 'package:watch_store/widgets/app_logo.dart';
@@ -21,10 +22,15 @@ class VerifyOtpScreen extends StatelessWidget {
           children: [
             const AppLogo(),
             AppDimens.xxLarge.sizedBoxHeight,
-            Text(AppStrings.otpCodeSendFor
-                .replaceAll(AppStrings.replace, '09123909012')),
+            Text(
+                AppStrings.otpCodeSendFor
+                    .replaceAll(AppStrings.replace, '09123909012'),
+                style: LightAppTextStyles.title),
             AppDimens.medium.sizedBoxHeight,
-            const Text(AppStrings.wrongNumberEditNumber),
+            const Text(
+              AppStrings.wrongNumberEditNumber,
+              style: LightAppTextStyles.wrongNumberChangeNumberText,
+            ),
             AppDimens.xxLarge.sizedBoxHeight,
             AppTextField(
               title: AppStrings.enterVerificationCode,
