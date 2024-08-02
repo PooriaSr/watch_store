@@ -3,8 +3,10 @@ import 'package:watch_store/components/extensions.dart';
 import 'package:watch_store/components/text_styles.dart';
 import 'package:watch_store/resource/dimens.dart';
 import 'package:watch_store/resource/strings.dart';
+import 'package:watch_store/route/screen_names.dart';
 import 'package:watch_store/widgets/app_logo.dart';
 import 'package:watch_store/widgets/app_text_field.dart';
+import 'package:watch_store/widgets/main_app_button.dart';
 
 class VerifyOtpScreen extends StatelessWidget {
   const VerifyOtpScreen({super.key});
@@ -39,7 +41,13 @@ class VerifyOtpScreen extends StatelessWidget {
               controller: textEditingController,
               textInputType: TextInputType.number,
               textAlign: TextAlign.center,
-            )
+            ),
+            AppDimens.xLarge.sizedBoxHeight,
+            MainAppButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, ScreenNames.userRegisterScreen);
+                },
+                title: AppStrings.next)
           ],
         )),
       ),

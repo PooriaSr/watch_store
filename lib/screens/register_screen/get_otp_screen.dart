@@ -3,6 +3,7 @@ import 'package:watch_store/components/extensions.dart';
 
 import 'package:watch_store/resource/dimens.dart';
 import 'package:watch_store/resource/strings.dart';
+import 'package:watch_store/route/screen_names.dart';
 import 'package:watch_store/widgets/main_app_button.dart';
 import 'package:watch_store/widgets/app_logo.dart';
 import 'package:watch_store/widgets/app_text_field.dart';
@@ -28,7 +29,11 @@ class GetOtpScreen extends StatelessWidget {
               hint: AppStrings.hintPhoneNumber,
             ),
             AppDimens.xLarge.sizedBoxHeight,
-            MainAppButton(onPressed: () {}, title: AppStrings.sendOtpCode)
+            MainAppButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, ScreenNames.verifyOtpScreen);
+                },
+                title: AppStrings.sendOtpCode)
           ],
         ),
       ),

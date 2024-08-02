@@ -32,4 +32,14 @@ class LightAppTextStyles {
       fontSize: 14,
       fontWeight: FontWeight.w400,
       color: Color.fromARGB(255, 0, 117, 251));
+  static const TextStyle btmNavActiveItem = TextStyle(
+      fontFamily: FontFamily.dana,
+      fontSize: 14,
+      fontWeight: FontWeight.w400,
+      color: LightAppColors.btmNavActiveItem);
+  static const TextStyle btmNavInActiveItem = TextStyle(
+      fontFamily: FontFamily.dana,
+      fontSize: 14,
+      fontWeight: FontWeight.w400,
+      color: LightAppColors.btmNavInActiveItem);
 }

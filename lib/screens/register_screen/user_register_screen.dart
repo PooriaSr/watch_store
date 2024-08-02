@@ -3,6 +3,7 @@ import 'package:watch_store/components/extensions.dart';
 import 'package:watch_store/gen/assets.gen.dart';
 import 'package:watch_store/resource/dimens.dart';
 import 'package:watch_store/resource/strings.dart';
+import 'package:watch_store/route/screen_names.dart';
 import 'package:watch_store/widgets/app_avatar.dart';
 import 'package:watch_store/widgets/main_app_button.dart';
 import 'package:watch_store/widgets/app_text_field.dart';
@@ -20,11 +21,11 @@ class UserRegisterScreen extends StatelessWidget {
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         resizeToAvoidBottomInset: false,
-        appBar: PreferredSize(
-            preferredSize: Size.fromHeight(phoneSize.height / 20),
-            child: MainAppBar(
-                title: AppStrings.register,
-                icon: SvgPicture.asset(Assets.svg.back))),
+        appBar: MainAppBar(
+          title: AppStrings.register,
+          icon: SvgPicture.asset(Assets.svg.back),
+          size: Size.fromHeight(phoneSize.height / 20),
+        ),
         body: SafeArea(
           child: SingleChildScrollView(
             reverse: true,
@@ -62,7 +63,10 @@ class UserRegisterScreen extends StatelessWidget {
                     icon: const Icon(Icons.location_on_outlined),
                   ),
                   AppDimens.xxxLarge.sizedBoxHeight,
-                  MainAppButton(onPressed: () {}, title: AppStrings.register),
+                  MainAppButton(
+                      onPressed: () =>
+                          Navigator.pushNamed(context, ScreenNames.mainScreen),
+                      title: AppStrings.register),
                   (MediaQuery.of(context).viewInsets.bottom / 1.4)
                       .sizedBoxHeight,
                 ],
