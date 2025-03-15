@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:watch_store/gen/assets.gen.dart';
 import 'package:watch_store/resource/colors.dart';
 import 'package:watch_store/resource/dimens.dart';
@@ -7,9 +6,10 @@ import 'package:watch_store/resource/strings.dart';
 import 'package:watch_store/widgets/app_icon_btn.dart';
 
 class MainBtnNav extends StatelessWidget {
-  const MainBtnNav({
-    super.key,
-  });
+  final Function({required int index}) selectedIndex;
+  static List isActive = [false, false, true];
+
+  const MainBtnNav({required this.selectedIndex, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,20 +26,29 @@ class MainBtnNav extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             AppIconBtn(
-                onTap: () {},
+                onTap: () {
+                  selectedIndex(index: 2);
+                  isActive = [true, false, false];
+                },
                 iconPath: Assets.svg.user,
                 title: AppStrings.profile,
-                isActive: false),
+                isActive: isActive[0]),
             AppIconBtn(
-                onTap: () {},
+                onTap: () {
+                  selectedIndex(index: 1);
+                  isActive = [false, true, false];
+                },
                 iconPath: Assets.svg.cart,
                 title: AppStrings.basket,
-                isActive: false),
+                isActive: isActive[1]),
             AppIconBtn(
-                onTap: () {},
+                onTap: () {
+                  selectedIndex(index: 0);
+                  isActive = [false, false, true];
+                },
                 iconPath: Assets.svg.home,
                 title: AppStrings.home,
-                isActive: true),
+                isActive: isActive[2]),
           ],
         ),
       ),

@@ -6,4 +6,5 @@ class ScreenNames {
   static const verifyOtpScreen = "/verifyOtpScreen";
   static const userRegisterScreen = "/userRegisterScreen";
   static const mainScreen = "/mainScreen";
+  static const homeScreen = "/mainScreen/homeScreen";
 }

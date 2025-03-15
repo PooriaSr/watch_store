@@ -30,7 +30,7 @@ class LightAppColors {
   static const Color shadow = Color.fromARGB(90, 0, 0, 0);
   static const Color hint = Colors.grey;
   static const Color appbar = Colors.white;
-  static const Color appbarShadow = Color.fromARGB(255, 217, 220, 228);
+  static const Color appbarShadow = Color.fromARGB(255, 200, 200, 200);
   static const Color iconColor = Colors.black;
   static const Color searchBar = Colors.white;
   static const Color scaffoldBackgroundColor =
